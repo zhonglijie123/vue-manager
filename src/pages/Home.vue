@@ -2,72 +2,73 @@
   <div class="home">
     <Row class="header" type="flex" align="middle">
       <div class="logo">
-        <img src="../assets/img/logo.png" height="30" alt="">
-        <span>VUE</span>MANAGER <Tag>beta</Tag>
+        <img src="../assets/img/sf-logo.png" height="40" alt="">
+        <span>顺丰科技</span>USM管理系统 <Tag>v1.0.0</Tag>
       </div>
-      <VmMsgPush style="margin-left:20px" :data="msgPushData"></VmMsgPush>
+      <VmMsgPush style=" position: absolute;right: 140px;" :data="msgPushData"></VmMsgPush>
       <Dropdown class="login-info" placement="bottom-end">
-        <Button type="ghost">
-            <img src="../assets/img/photo.jpg" height="30" alt="">Admin
+        <Button type="ghost" style="border: 0">
+          <Avatar icon="person" src="https://i.loli.net/2017/08/21/599a521472424.jpg"/>
+          管理员
             <Icon type="arrow-down-b"></Icon>
-        </Button> 
+        </Button>
         <Dropdown-menu slot="list">
             <Dropdown-item divided><i class="fa fa-key"></i>Log out</Dropdown-item>
             <Dropdown-item divided><i class="fa fa-cog"></i>Setting</Dropdown-item>
         </Dropdown-menu>
       </Dropdown>
-    </Row>   
+    </Row>
     <div class="sidebar">
       <Menu theme="dark" width="100%" class="menu" :active-name="activeName" :accordion="true">
           <Menu-item name="Dashboard">
               <router-link to="/">
                 <i class="fa fa-dashboard"></i>
-                Dashboard  
+                用户管理
               </router-link>
           </Menu-item>
           <Menu-item name="Widget">
               <router-link to="/widget">
                 <i class="fa fa-cogs"></i>
-                Widget  
+                渠道管理
               </router-link>
           </Menu-item>
           <Menu-item name="Panels">
               <router-link to="/panels">
                 <i class="fa fa-database"></i>
-                Panels
+                代理商信息
               </router-link>
           </Menu-item>
           <Menu-item name="Editor">
               <router-link to="/editor">
                 <i class="fa fa-pencil"></i>
-                Editor
+                文章发布
               </router-link>
           </Menu-item>
           <Menu-item name="ImageList">
               <router-link to="/imagelist">
                 <i class="fa fa-photo"></i>
-                Image List  
+                图片资源
               </router-link>
           </Menu-item>
           <Menu-item name="Charts">
               <router-link to="/charts">
                 <i class="fa fa-bar-chart"></i>
-                Charts  
+                报表管理
               </router-link>
           </Menu-item>
           <Submenu name="DataTable">
               <template slot="title">
                   <i class="fa fa-database"></i>
-                  Data Table
+                  信息查询
               </template>
               <Menu-item name="BasicTable">
                 <router-link to="/basic-table">
-                  Basic Table 
+                  Basic Table
                 </router-link>
               </Menu-item>
               <Menu-item name="EditableTable">
                 <router-link to="/editable-table">
-                  Editable Table  
+                  Editable Table
                 </router-link>
               </Menu-item>
           </Submenu>
@@ -78,12 +79,12 @@
               </template>
               <Menu-item name="Login">
                 <router-link to="/login">
-                  Login 
+                  Login
                 </router-link>
               </Menu-item>
               <Menu-item name="Lockscreen">
                 <router-link to="/lockscreen">
-                  Lockscreen 
+                  Lockscreen
                 </router-link>
               </Menu-item>
               <Menu-item name="Loading">
@@ -95,8 +96,8 @@
       </Menu>
     </div>
     <div class="main-content">
-      <router-view></router-view> 
-      <p class="vm-author">vue-manager designed by <a href="https://github.com/luosijie" target="_blank">Jesse Luo</a></p> 
+      <router-view></router-view>
+      <p class="vm-author">vue-manager designed by <a href="https://github.com/luosijie" target="_blank">Jesse Luo</a></p>
     </div>
   </div>
   </div>

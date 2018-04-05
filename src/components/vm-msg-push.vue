@@ -1,8 +1,11 @@
 <template>
   <Dropdown :placement="placement" class="vm-msg-push">
       <Badge :count="data.length" class="vm-badge">
-          <i class="fa fa-bell"></i>
+        <Icon type="ios-bell-outline" size="26"></Icon>
       </Badge>
+
+
+
       <Dropdown-menu slot="list">
           <Dropdown-item>You have {{ data.length }} message!</Dropdown-item>
           <Dropdown-item divided v-for="item in data" :key="item.id">
